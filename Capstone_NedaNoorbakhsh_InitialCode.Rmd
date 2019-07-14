@@ -14,10 +14,17 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r}
+#install.packages("tidyverse")
 #install.packages("ggplot2")
+#install.packages("ggalt", dependencies=TRUE)
 #install.packages("countrycode")
-library(ggplot2)
+#install.packages("rworldmap")
+library(tidyverse) # general
+library(ggalt) # dumbbell plots
 library(countrycode) # continent
+library(rworldmap) # quick country-level heat maps
+library(gridExtra) # plots
+library(broom) # significant trends within countries
 theme_set(theme_light())
 
 # 1) Import & data cleaning
